@@ -47,6 +47,12 @@ namespace Halcyon
             keyValues.Remove(key);
         }
 
+        public void ClearValues()
+        {
+            dropDownCollection.Clear();
+            keyValues.Clear();
+        }
+        
         /// <summary>
         /// Use to debug if the value is actually is what it should be
         /// </summary>
