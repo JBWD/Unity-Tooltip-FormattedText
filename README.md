@@ -40,7 +40,7 @@ Note: ScriptableObjects will need to use OnValidate()
 
 The [StringKey] attribute allows for any variable within the current class or inherited class to be added during validation.
 
-```
+```csharp
 [StringKey]
 public int minDamage = 2,
     maxDamage = 5;
@@ -60,7 +60,7 @@ private void OnValidate()
 
 Allows for an enumeration to be sent to the FormattedString and which will then use the EnumNames to try add new keys. (Not Case Sensative)
 
-```
+```csharp
 public int minDamage = 2,
     maxDamage = 5;
 public string damageType = "Fire";
@@ -85,7 +85,7 @@ private void OnDrawGizmos()
 
 Allows for an string [] to be sent to the FormattedString and which will then use the strings to try add new keys. (Not Case Sensative)
 
-```
+```csharp
 public int minDamage = 2,
     maxDamage = 5;
 public string damageType = "Fire";
@@ -103,7 +103,7 @@ private void OnValidate()
 Allows for each key to be added manually, this provides the best performance as each object is not using reflection. This also allows for other objects to be added and
 also allows for custom names to be added. This can provide consistancy if different programmers are on different parts of a project.
 
-```
+```csharp
 public Character character;
 public int minDamage = 2,
     maxDamage = 5;
