@@ -1,3 +1,6 @@
+using System.Reflection;
+using Microsoft.SqlServer.Server;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,6 +14,8 @@ namespace Halcyon
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
            
+            
+            
             var baseText = property.FindPropertyRelative("baseText");
             EditorGUILayout.LabelField(property.displayName);
             baseText.stringValue = EditorGUILayout.TextArea(baseText.stringValue, new GUILayoutOption[]
@@ -51,11 +56,21 @@ namespace Halcyon
 
                     int index = i;
                     GUILayout.Label($"({index}): {collection.GetArrayElementAtIndex(index).stringValue}");
-                    
-                    
+
                 }
-                EditorGUILayout.EndHorizontal();
+                if(collection.arraySize> 0)
+                    EditorGUILayout.EndHorizontal();
+                if (GUILayout.Button("Clear Values"))
+                {
+                    var obj = (FormattedString)property.GetUnderlyingValue().ConvertTo(typeof(FormattedString));
+                    obj.ClearValues();
+                }
+
             }
+
+
+
+
         }
     }
 }
