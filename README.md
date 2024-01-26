@@ -34,6 +34,8 @@ Example:  "Deals 3 to 8 Fire damage to the target."
 Programmers have been provided 4 different ways to add keys to the formatter:
 To build the list automatically call ValidationInitialization() in any of: OnValidate(), OnDrawGizmos(), or OnDrawGizmosSelected().
 
+Note: ScriptableObjects will need to use OnValidate()
+
 #### Option 1: Attributes
 
 The [StringKey] attribute allows for any variable within the current class or inherited class to be added during validation.
