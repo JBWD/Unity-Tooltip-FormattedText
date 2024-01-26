@@ -9,7 +9,7 @@ Built for designers in mind, with a built in property drawers and realtime prope
 
 Allows for both indices and named variable access with the click of a toggle
 
-Clear Values button has been added if during programming a designer doesn't know if the list is up to date click the button. This will clear the values and look as though the  then modify a value within the object such as clicking UseIndices twice.
+Clear Values button has been added if during programming a designer doesn't know if the list is up to date click the button. This will clear the values and look as though the list is empty, depending on where the initialization is located, modify a value within the object such as clicking UseIndices twice and this will refresh the values.
 
 ![image](https://github.com/JBWD/Unity-Tooltip-FormattedText/assets/35278058/70547305-1116-4880-8f99-fa31e706fa00)
 
